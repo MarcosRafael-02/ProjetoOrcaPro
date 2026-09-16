@@ -1,5 +1,14 @@
-import { } from './home'
-import { useNavigate } from 'react-router-dom'
+import {
+    Div,
+    Img,
+    Main,
+    Name,
+    Section,
+    ItemMenu,
+    ContainerMenu,
+    ContainerSair,
+    Title
+} from './Sidebar'
 
 import logo from '../../assets/logo.png'
 import logoDashboard from '../../assets/painel-de-controle.png'
@@ -14,51 +23,51 @@ import logoPendentes from '../../assets/pendentes.png'
 import logoEstatisticas from '../../assets/estatisticas.png'
 
 function homeInicial() {
-    const navigate = useNavigate()
 
     return (
-        <main>
-            <section>
+        <Main>
+            <Section>
 
-                <div>
-                    <img src={logo} alt="Logo do Projeto" />
+                <Div className='header-lateral'>
+                    <Img src={logo} alt="Logo do Projeto" />
+
                     <div>
-                        <h1>OrçaPro</h1>
-                        <p>Orçamentos</p>
+                        <Title>OrçaPro</Title>
+                        <Name>Orçamentos</Name>
                     </div>
-                </div>
+                </Div>
 
-                <div>
+                <ContainerMenu>
 
-                    <div>
+                    <ItemMenu>
                         <img src={logoDashboard} alt="Logo Dashboard" />
                         <p>Dashboard</p>
-                    </div>
+                    </ItemMenu>
 
-                    <div>
+                    <ItemMenu>
                         <img src={logoOrcamentos} alt="Logo Orçamentos" />
                         <p>Orçamentos</p>
-                    </div>
+                    </ItemMenu>
 
-                    <div>
+                    <ItemMenu>
                         <img src={logoNovoOrcamento} alt="Logo novo orçamento" />
                         <p> Novo Orçamento </p>
-                    </div>
+                    </ItemMenu>
 
-                    <div>
+                    <ItemMenu>
                         <img src={logoPerfil} alt="Logo Perfil" />
                         <p> Perfil </p>
-                    </div>
+                    </ItemMenu>
 
-                </div>
+                </ContainerMenu>
 
-                <div>
+                <ContainerSair>
                     <img src={logoSair} alt="Logo Sair" />
                     <button> Sair </button>
-                </div>
+                </ContainerSair>
 
-            </section>
-
+            </Section>
+            {/*  
             <section>
                 <div>
                     <div>
@@ -67,14 +76,14 @@ function homeInicial() {
                     </div>
 
                     <div>
-                        <img src={logoPesquisar} alt="Logo de pesquisa" />
+                        <Img src={logoPesquisar} alt="Logo de pesquisa" />
                         <input type="text" placeholder='Buscar Orçamentos' />
                     </div>
 
                     <div>
-                        <img src={logoNotificacao} alt="Logo Notificação" />
+                        <Img src={logoNotificacao} alt="Logo Notificação" />
 
-                        <img src={logoPerfil} alt="Logo Perfil" />
+                        <Img src={logoPerfil} alt="Logo Perfil" />
                     </div>
                 </div>
             </section>
@@ -83,7 +92,7 @@ function homeInicial() {
                 <article>
                     <div>
                         <p>Total de Orçamentos</p>
-                        <img src={logoOrcamentos} alt="" />
+                        <Img src={logoOrcamentos} alt="" />
                     </div>
 
                     <p> 0 </p>
@@ -92,7 +101,7 @@ function homeInicial() {
                 <article>
                     <div>
                         <p>Aprovados</p>
-                        <img src={logoAprovados} alt=" Logo de projetos aprovados" />
+                        <Img src={logoAprovados} alt=" Logo de projetos aprovados" />
                     </div>
                     <p> 0 </p>
                 </article>
@@ -100,7 +109,7 @@ function homeInicial() {
                 <article>
                     <div>
                         <p>Pendentes</p>
-                        <img src={logoPendentes} alt=" Logo de projetos pendentes" />
+                        <Img src={logoPendentes} alt=" Logo de projetos pendentes" />
                     </div>
                     <p> 0 </p>
                 </article>
@@ -108,7 +117,7 @@ function homeInicial() {
                 <article>
                     <div>
                         <p>Valor total aprovado</p>
-                        <img src={logoEstatisticas} alt="Logo de valor total de orçamentos aprovados" />
+                        <Img src={logoEstatisticas} alt="Logo de valor total de orçamentos aprovados" />
                     </div>
                     <p> R$ 00,00 </p>
                 </article>
@@ -121,7 +130,9 @@ function homeInicial() {
                 </div>
 
             </section>
-
-        </main>
+            */}
+        </Main>
     )
 }
+
+export default homeInicial
