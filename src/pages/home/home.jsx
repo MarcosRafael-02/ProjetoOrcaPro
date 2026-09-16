@@ -1,14 +1,20 @@
-import { Article, Img, Title, Paragrafo, Email, Input, Button, Main } from '../styles/styles'
-import logo from '../assets/logo.png'
+import { Img, Title, Paragrafo, Article, Email, Input, Main } from './styles'
+import Button from '../../components/button'
+import { useNavigate } from 'react-router-dom'
+
+import logo from '../../assets/logo.png'
 
 function App() {
+
+  const navigate = useNavigate();
+
   return (
     <Main>
 
       <Article>
 
         <div>
-          <Img src={logo} alt="Logo da página de login" />
+          <Img src={logo} alt="Logo Default" />
           <Title>OrçaPro</Title>
           <Paragrafo>Entre na sua conta</Paragrafo>
         </div>
@@ -16,7 +22,7 @@ function App() {
         <div>
           <Email>Email</Email>
           <Input type='text' placeholder='seu@email.com'></Input>
-          
+
           <Email>Senha</Email>
           <Input type='text' placeholder='Digite sua senha'></Input>
         </div>
@@ -24,7 +30,9 @@ function App() {
         <Button> Entrar </Button>
 
         <div>
-          <Paragrafo> Não tem conta? <a href="#"> Cadastre-se</a> </Paragrafo>
+          <Paragrafo> Não tem conta? <a href="#" onClick={() => navigate('/pagina-de-registro')}> Cadastre-se</a> </Paragrafo>
+
+          <Paragrafo> <a href=""> Redefinir minha Senha </a>  </Paragrafo>
         </div>
 
       </Article>
