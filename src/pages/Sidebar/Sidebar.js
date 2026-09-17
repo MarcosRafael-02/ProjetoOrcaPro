@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-export const Main = styled.main``
 
 export const Section = styled.section`
     display: flex;
@@ -26,10 +25,6 @@ export const Div = styled.div`
 export const Img = styled.img`
     width: 60px;
     margin-right: 20px;
-`
-
-export const ContainerMenu = styled.div`
-    
 `
 
 export const ContainerSair = styled.div`
@@ -66,10 +61,3 @@ export const ItemMenu = styled.div`
 export const Title = styled.h1`
     font-size: 24px;
 `
-
-export const Name = styled.p``
-
-export const Input = styled.input``
-
-export const article = styled.article``
-
