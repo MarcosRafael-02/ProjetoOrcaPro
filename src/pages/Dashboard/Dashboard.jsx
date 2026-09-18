@@ -1,4 +1,4 @@
-import { Article, Header, Section, Main, Img, Div } from './Dashboard'
+import { Article, Section, Main, Img, Div, Header } from './Dashboard'
 
 import logoPesquisar from '../../assets/pesquisar.png'
 import logoNotificacao from '../../assets/notificacao.png'
@@ -18,7 +18,7 @@ function Dashboard() {
                 </div>
 
                 <Div>
-                    <img src={logoPesquisar} alt="logo pesquisar do input" />
+                    <Img src={logoPesquisar} alt="logo pesquisar do input" />
                     <input type="text" placeholder='Buscar Orçamentos' />
 
                     <a href=""><Img src={logoNotificacao} alt="" /></a>
@@ -27,7 +27,7 @@ function Dashboard() {
 
             </Header>
 
-            <Section>
+            <section>
                 <Article>
                     <div>
                         <p>Total de Orçamentos</p>
@@ -60,13 +60,13 @@ function Dashboard() {
                     </div>
                     <Img src={logoEstatisticas} alt="" />
                 </Article>
-            </Section>
+            </section>
 
-            <section>
+            <Section>
                 <p>Orçamentos Recentes</p>
 
                 <a href="#"> Ver Todos</a>
-            </section>
+            </Section>
 
         </Main>
     )
