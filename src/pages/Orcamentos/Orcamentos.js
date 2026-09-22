@@ -4,58 +4,56 @@ export const Main = styled.main`
 
     section{
         display: flex;
-        font-size: 24px;
-        justify-content: space-between;
-        padding: 0 50px ;
+        justify-content: center;
         align-items: center;
+        height: 40vh;
+        text-align: center;
+        border: 1px solid #ccc;
+        margin: 20px;
+        border-radius: 10px;
 
-        a{
-            text-decoration: none;
-            padding: 10px;
-            color: black;
+        img{
+            width: 40px;
+            background-color: #ddd;
+            padding: 6px;
+            border-radius: 50%;
         }
-    }
-`
 
-export const Header = styled.header`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    border-radius: 30px;
-
-    div{
+        button{
+            width: max-content;
+        }
         
         p{
-            font-size: 22px;
+            font-size: 18px;
+            margin-top: 10px;
         }
     }
 `
 
-
-export const Div = styled.div`
+export const Section = styled.div`
     display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    padding: 5px;
-    border-radius: 12px;
-    
+    justify-content: space-between;
+    margin: 20px 20px 0 ;
+
     img{
         width: 20px;
         margin-right: 10px;
     }
-    
+
     input{
         border: none;
+        width: 400px;
     }
-    
+
     input:focus{
         outline: none;
     }
-    
 `
 
-export const Img = styled.img`
-    width: 30px;
+export const Div = styled.div`
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 10px;
 `

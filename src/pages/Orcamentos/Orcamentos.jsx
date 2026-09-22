@@ -1,45 +1,34 @@
-import { Main, Header, Div, Img } from './Orcamentos'
-
+import HeaderDefault from '../../components/Header/header'
+import Button from '../../components/button'
+import { Section, Div, Main } from './Orcamentos'
 import logoPesquisar from '../../assets/pesquisar.png'
-import logoNotificacao from '../../assets/notificacao.png'
-import logoPerfil from '../../assets/perfil.png'
 
 function Orcamentos() {
     return (
         <Main>
+            <HeaderDefault
+                titulo="Orçamento"
+                subtitulo="0 orçamentos encontrados"
+            />
 
-            <Header>
-
-                <div>
-                    <h1>Orçamentos</h1>
-                    <p>0 orçamentos encontrados</p>
-                </div>
-
+            <Section>
                 <Div>
-                    <Img src={logoPesquisar} alt="logo pesquisar do input" />
-                    <input type="text" placeholder='Buscar Orçamentos' />
-                    <a href=""><Img src={logoNotificacao} alt="" /></a>
-                    <a href=""><Img src={logoPerfil} alt="" /></a>
+                    <img src={logoPesquisar} alt="logo pesquisar do input" />
+                    <input type="text"
+                        placeholder='Buscar por projeto ou cliente...' />
                 </Div>
-
-            </Header>
-
-            <section>
-                <div>
-                    <Img src={logoPesquisar} alt='logo pesquisar do input' />
-                    <input type="text" />
-                </div>
-
-                <div></div>
-            </section>
+            </Section>
 
             <section>
-                <div>
+                <article>
+                    <img src={logoPesquisar} alt="" />
+                    <p>Nnehum orçamento encontrado</p>
+                    <p>Crie seu primeiro orçamento</p>
+                    <Button>+ Criar Orçamento</Button>
+                </article>
 
-                </div>
             </section>
-
-        </Main>
+        </Main >
     )
 }
 

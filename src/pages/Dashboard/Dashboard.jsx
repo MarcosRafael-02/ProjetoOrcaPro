@@ -1,8 +1,6 @@
-import { Article, Section, Main, Img, Div, Header } from './Dashboard'
+import { Article, Section, Main, Img } from './Dashboard'
+import HeaderDefault from '../../components/Header/header'
 
-import logoPesquisar from '../../assets/pesquisar.png'
-import logoNotificacao from '../../assets/notificacao.png'
-import logoPerfil from '../../assets/perfil.png'
 import logoAprovados from '../../assets/aprovados.png'
 import logoPendentes from '../../assets/pendentes.png'
 import logoEstatisticas from '../../assets/estatisticas.png'
@@ -11,21 +9,10 @@ import logoOrcamentos from '../../assets/prancheta.png'
 function Dashboard() {
     return (
         <Main>
-            <Header>
-                <div>
-                    <h1>Dashboard</h1>
-                    <p>Visão geral dos seus orçamentos</p>
-                </div>
-
-                <Div>
-                    <Img src={logoPesquisar} alt="logo pesquisar do input" />
-                    <input type="text" placeholder='Buscar Orçamentos' />
-
-                    <a href=""><Img src={logoNotificacao} alt="" /></a>
-                    <a href=""><Img src={logoPerfil} alt="" /></a>
-                </Div>
-
-            </Header>
+            <HeaderDefault
+                titulo="Orçamentos"
+                subtitulo="Visão Geral dos seus orçamentos"
+            />
 
             <section>
                 <Article>
